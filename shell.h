@@ -61,14 +61,14 @@ char **separator(char *input);
 /****** FILE ARGUMENT HANDLER FUNCTIONS ******/
 
 void read_file(char *file, char **argv);
-void treat_file(char *line, int count, FILE *fp, char **argv);
-void exit_bul_for_file(char **cmd, char *line, FILE *fd);
+void treat_file(char *arr, int number, FILE *fn, char **argv);
+void exit_bulp_for_file(char **cmd, char *line, FILE *fd);
 
 /****** PARSED ARGUMENT HANDLER FUNCTIONS *****/
 
-char **parse_cmd(char *input);
+char **cmd_parse(char *input);
 int handle_builtin(char **cmd, int er);
-int check_cmd(char **cmd, char *input, int c, char **argv);
+int find_cmd(char **cmd, char *input, int q, char **argv);
 void signal_to_handle(int sig);
 
 /******* ERROR HANDLERS ******/
@@ -110,11 +110,11 @@ int display_help(char **cmd, __attribute__((unused))int st);
 
 /****** BUILTIN COMMAND HANDLERS AND EXECUTE ******/
 
-int check_builtin(char **cmd);
+int find_builtin(char **cmd);
 int handle_builtin(char **cmd, int st);
-void exit_bul(char **cmd, char *input, char **argv, int c, int stat);
-int change_dir(char **cmd, __attribute__((unused))int st);
-int dis_env(__attribute__((unused)) char **cmd,
+void exit_bulp(char **cmd, char *input, char **argv, int c, int stat);
+int change_directory(char **cmd, __attribute__((unused))int st);
+int display_env(__attribute__((unused)) char **cmd,
 	    __attribute__((unused)) int st);
 int echo_bulp(char **cmd, int st);
 int his_display(__attribute__((unused))char **c,

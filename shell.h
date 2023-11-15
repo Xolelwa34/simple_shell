@@ -85,8 +85,8 @@ void free_environ(char **envi);
 
 /****** PRINTING FUNCTIONS *****/
 
-void print_number(unsigned int n);
-void print_number_int(int n);
+void print_number(unsigned int b);
+void print_number_int(int b);
 int print_echo(char **cmd);
 
 /******* PATH FINDER *******/

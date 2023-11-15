@@ -40,11 +40,11 @@ char *_strdup(char *str);
 /*********** MEMORY HANDLERS ***********/
 
 void free_env(char **env);
-void *fill_an_array(void *a, int el, unsigned int len);
+void *Array_fill(void *i, int cd, unsigned int length);
 char *_memcpy(char *dest, char *src, unsigned int n);
 void *_calloc(unsigned int size);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-void free_all(char **input, char *line);
+void free_memory(char **input, char *line);
 
 /****** MISCELLANEOUS AND INPUT FUNCTIONS *******/
 
@@ -62,7 +62,7 @@ char **separator(char *input);
 
 void read_file(char *file, char **argv);
 void treat_file(char *arr, int number, FILE *fn, char **argv);
-void exit_bulp_for_file(char **cmd, char *line, FILE *fd);
+void exit_bulp_for_file(char **cmd, char *line, FILE *fn);
 
 /****** PARSED ARGUMENT HANDLER FUNCTIONS *****/
 
@@ -92,8 +92,8 @@ int print_echo(char **cmd);
 /******* PATH FINDER *******/
 
 int path_cmd(char **cmd);
-char *build(char *token, char *value);
-char *_getenv(char *name);
+char *make(char *token, char *number);
+char *_find_env(char *got);
 
 /******* ASSIST HANDLERS *******/
 

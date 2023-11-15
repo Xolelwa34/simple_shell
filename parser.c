@@ -23,13 +23,13 @@ char **cmd_parse(char *input)
 		perror("hsh");
 		return (NULL);
 	}
-	arg = _strtok(input, "\n\t\r\a ");
+	arg = _2strtok(input, "\n\t\r\a ");
 	for (a = 0; arg; a++)
 	{
 		arguments[a] = arg;
 		arg = _strtok(NULL, "\n\t\r\a ");
 	}
-	arguments[] = NULL;
+	arguments[a] = NULL;
 
 	return (arguments);
 }

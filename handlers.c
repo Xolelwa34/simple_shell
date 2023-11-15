@@ -9,7 +9,7 @@ int find_builtin(char **cmd)
 {
 	builtin simple[] = {
 		{"cd", NULL},
-		{"help", NULL},
+		{"assist", NULL},
 		{"echo", NULL},
 		{"env", NULL},
 		{"history", NULL},
@@ -41,7 +41,7 @@ int handle_builtin(char **cmd, int st)
 	builtin built_in[] = {
 		{"cd", change_directory},
 		{"env", display_env},
-		{"help",present_help},
+		{"assist",present_assist},
 		{"echo", echo_bulp},
 		{"history", his_display},
 		{NULL, NULL}

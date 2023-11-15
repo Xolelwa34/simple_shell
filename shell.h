@@ -74,8 +74,8 @@ void signal_to_handle(int sig);
 /******* ERROR HANDLERS ******/
 
 void print_error(char *input, int counter, char **argv);
-void _prerror(char **argv, int c, char **cmd);
-void error_file(char **argv, int c);
+void perror(char **argv, int c, char **cmd);
+void file_error(char **argv, int c);
 
 /****** ENVIRONMENT HANDLERS ******/
 
@@ -95,18 +95,18 @@ int path_cmd(char **cmd);
 char *build(char *token, char *value);
 char *_getenv(char *name);
 
-/******* HELP HANDLERS *******/
+/******* ASSIST HANDLERS *******/
 
-void help_env(void);
-void help_setenv(void);
-void help_unsetenv(void);
-void help_history(void);
-void help_all(void);
-void help_alias(void);
-void help_cd(void);
-void help_exit(void);
-void help_help(void);
-int display_help(char **cmd, __attribute__((unused))int st);
+void assist_env(void);
+void assist_setenv(void);
+void assist_unsetenv(void);
+void assist_hist(void);
+void assist_all(void);
+void assist_alias(void);
+void assist_cd(void);
+void assist_exit(void);
+void assist_inuse(void);
+int present_assist(char **cmd, __attribute__((unused))int st);
 
 /****** BUILTIN COMMAND HANDLERS AND EXECUTE ******/
 
